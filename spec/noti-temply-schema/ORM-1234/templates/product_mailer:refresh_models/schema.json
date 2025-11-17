@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "total_updated": {
+      "title": "Total Updated",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "notification_setting",
+    "total_updated"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

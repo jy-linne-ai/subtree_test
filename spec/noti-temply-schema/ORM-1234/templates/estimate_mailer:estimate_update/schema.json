@@ -1,0 +1,317 @@
+{
+  "$defs": {
+    "estimate": {
+      "properties": {
+        "delivery_date_text": {
+          "title": "Delivery Date Text",
+          "type": "string"
+        },
+        "trans": {
+          "$ref": "#/$defs/estimate.trans"
+        }
+      },
+      "required": [
+        "delivery_date_text",
+        "trans"
+      ],
+      "title": "estimate",
+      "type": "object"
+    },
+    "estimate.trans": {
+      "properties": {
+        "shipping_method_label": {
+          "title": "Shipping Method Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "shipping_method_label"
+      ],
+      "title": "estimate.trans",
+      "type": "object"
+    },
+    "estimate_items": {
+      "properties": {
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "product_name",
+        "quantity"
+      ],
+      "title": "estimate_items",
+      "type": "object"
+    },
+    "request_info": {
+      "properties": {
+        "pic_name_with_honorific": {
+          "title": "Pic Name With Honorific",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pic_name_with_honorific"
+      ],
+      "title": "request_info",
+      "type": "object"
+    },
+    "site": {
+      "properties": {
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/site.sale_office"
+        }
+      },
+      "required": [
+        "name_with_label"
+      ],
+      "title": "site",
+      "type": "object"
+    },
+    "site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "phone"
+      ],
+      "title": "site.sale_office",
+      "type": "object"
+    },
+    "system_message_changes": {
+      "properties": {
+        "details": {
+          "items": {
+            "$ref": "#/$defs/system_message_changes.details"
+          },
+          "title": "Details",
+          "type": "array"
+        },
+        "header": {
+          "title": "Header",
+          "type": "string"
+        }
+      },
+      "required": [
+        "details",
+        "header"
+      ],
+      "title": "system_message_changes",
+      "type": "object"
+    },
+    "system_message_changes.details": {
+      "properties": {
+        "after": {
+          "title": "After",
+          "type": "string"
+        },
+        "before": {
+          "title": "Before",
+          "type": "string"
+        },
+        "product": {
+          "$ref": "#/$defs/system_message_changes.details.product"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "after",
+        "before",
+        "product",
+        "text"
+      ],
+      "title": "system_message_changes.details",
+      "type": "object"
+    },
+    "system_message_changes.details.product": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "system_message_changes.details.product",
+      "type": "object"
+    },
+    "tenant": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/$defs/tenant.settings"
+        }
+      },
+      "required": [
+        "name",
+        "settings"
+      ],
+      "title": "tenant",
+      "type": "object"
+    },
+    "tenant.settings": {
+      "properties": {
+        "service": {
+          "$ref": "#/$defs/tenant.settings.service"
+        }
+      },
+      "required": [
+        "service"
+      ],
+      "title": "tenant.settings",
+      "type": "object"
+    },
+    "tenant.settings.service": {
+      "properties": {
+        "theme_color_json": {
+          "$ref": "#/$defs/tenant.settings.service.theme_color_json"
+        },
+        "theme_logo_url": {
+          "title": "Theme Logo Url",
+          "type": "string"
+        },
+        "theme_rentals_logo_url": {
+          "title": "Theme Rentals Logo Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "theme_color_json",
+        "theme_logo_url",
+        "theme_rentals_logo_url"
+      ],
+      "title": "tenant.settings.service",
+      "type": "object"
+    },
+    "tenant.settings.service.theme_color_json": {
+      "properties": {
+        "email_header_bg_color": {
+          "title": "Email Header Bg Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email_header_bg_color"
+      ],
+      "title": "tenant.settings.service.theme_color_json",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "available_on_sp_logo": {
+      "title": "Available On Sp Logo",
+      "type": "boolean"
+    },
+    "btn_footer_label": {
+      "title": "Btn Footer Label",
+      "type": "string"
+    },
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "chat_url": {
+      "title": "Chat Url"
+    },
+    "estimate": {
+      "$ref": "#/$defs/estimate"
+    },
+    "estimate_items": {
+      "items": {
+        "$ref": "#/$defs/estimate_items"
+      },
+      "title": "Estimate Items",
+      "type": "array"
+    },
+    "header_text": {
+      "title": "Header Text",
+      "type": "string"
+    },
+    "histories_url": {
+      "title": "Histories Url"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "onboarding_url": {
+      "title": "Onboarding Url",
+      "type": "string"
+    },
+    "order_number": {
+      "title": "Order Number",
+      "type": "string"
+    },
+    "request_info": {
+      "$ref": "#/$defs/request_info"
+    },
+    "site": {
+      "$ref": "#/$defs/site"
+    },
+    "start_guide_url": {
+      "title": "Start Guide Url",
+      "type": "string"
+    },
+    "subject_text": {
+      "title": "Subject Text",
+      "type": "string"
+    },
+    "system_message_changes": {
+      "items": {
+        "$ref": "#/$defs/system_message_changes"
+      },
+      "title": "System Message Changes",
+      "type": "array"
+    },
+    "tenant": {
+      "$ref": "#/$defs/tenant"
+    },
+    "trans_type": {
+      "title": "Trans Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "available_on_sp_logo",
+    "btn_footer_label",
+    "btn_footer_link",
+    "chat_url",
+    "estimate",
+    "estimate_items",
+    "header_text",
+    "histories_url",
+    "order_number",
+    "request_info",
+    "site",
+    "subject_text",
+    "system_message_changes",
+    "tenant",
+    "trans_type"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

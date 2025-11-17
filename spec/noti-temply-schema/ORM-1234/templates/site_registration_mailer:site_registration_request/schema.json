@@ -1,0 +1,176 @@
+{
+  "$defs": {
+    "request": {
+      "properties": {
+        "branch": {
+          "$ref": "#/$defs/request.branch"
+        },
+        "request_info": {
+          "$ref": "#/$defs/request.request_info"
+        },
+        "site": {
+          "$ref": "#/$defs/request.site"
+        },
+        "temporary_rental_site_code": {
+          "title": "Temporary Rental Site Code",
+          "type": "string"
+        },
+        "user": {
+          "$ref": "#/$defs/request.user"
+        }
+      },
+      "required": [
+        "branch",
+        "request_info",
+        "site",
+        "temporary_rental_site_code",
+        "user"
+      ],
+      "title": "request",
+      "type": "object"
+    },
+    "request.branch": {
+      "properties": {
+        "client": {
+          "$ref": "#/$defs/request.branch.client"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "client",
+        "name"
+      ],
+      "title": "request.branch",
+      "type": "object"
+    },
+    "request.branch.client": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "request.branch.client",
+      "type": "object"
+    },
+    "request.request_info": {
+      "properties": {
+        "pic_phone": {
+          "title": "Pic Phone",
+          "type": "string"
+        },
+        "site": {
+          "$ref": "#/$defs/request.request_info.site"
+        }
+      },
+      "required": [
+        "pic_phone",
+        "site"
+      ],
+      "title": "request.request_info",
+      "type": "object"
+    },
+    "request.request_info.site": {
+      "properties": {
+        "sale_office": {
+          "$ref": "#/$defs/request.request_info.site.sale_office"
+        }
+      },
+      "required": [
+        "sale_office"
+      ],
+      "title": "request.request_info.site",
+      "type": "object"
+    },
+    "request.request_info.site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "request.request_info.site.sale_office",
+      "type": "object"
+    },
+    "request.site": {
+      "properties": {
+        "branch_client_name": {
+          "title": "Branch Client Name",
+          "type": "string"
+        },
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "branch_client_name",
+        "name_with_label"
+      ],
+      "title": "request.site",
+      "type": "object"
+    },
+    "request.user": {
+      "properties": {
+        "email": {
+          "title": "Email",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email"
+      ],
+      "title": "request.user",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "full_address": {
+      "title": "Full Address",
+      "type": "string"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "other_request_info": {
+      "title": "Other Request Info",
+      "type": "string"
+    },
+    "pic_name": {
+      "title": "Pic Name",
+      "type": "string"
+    },
+    "request": {
+      "$ref": "#/$defs/request"
+    },
+    "site_map_info": {
+      "title": "Site Map Info",
+      "type": "string"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "full_address",
+    "notification_setting",
+    "other_request_info",
+    "pic_name",
+    "request",
+    "site_map_info"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

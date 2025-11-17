@@ -1,0 +1,375 @@
+{
+  "$defs": {
+    "order_items": {
+      "properties": {
+        "item_product_code": {
+          "title": "Item Product Code",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "item_product_code",
+        "quantity"
+      ],
+      "title": "order_items",
+      "type": "object"
+    },
+    "order_list": {
+      "properties": {
+        "approval_log": {
+          "$ref": "#/$defs/order_list.approval_log"
+        },
+        "delivery_date_title": {
+          "title": "Delivery Date Title",
+          "type": "string"
+        },
+        "order": {
+          "$ref": "#/$defs/order_list.order"
+        },
+        "rent_items": {
+          "items": {
+            "$ref": "#/$defs/order_list.rent_items"
+          },
+          "title": "Rent Items",
+          "type": "array"
+        },
+        "return_date_title": {
+          "title": "Return Date Title",
+          "type": "string"
+        },
+        "sale_items": {
+          "items": {
+            "$ref": "#/$defs/order_list.sale_items"
+          },
+          "title": "Sale Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "approval_log",
+        "delivery_date_title",
+        "order",
+        "rent_items",
+        "return_date_title",
+        "sale_items"
+      ],
+      "title": "order_list",
+      "type": "object"
+    },
+    "order_list.approval_log": {
+      "properties": {
+        "approved_level": {
+          "title": "Approved Level",
+          "type": "integer"
+        },
+        "steps_json_list": {
+          "items": {
+            "$ref": "#/$defs/order_list.approval_log.steps_json_list"
+          },
+          "title": "Steps Json List",
+          "type": "array"
+        }
+      },
+      "required": [
+        "approved_level"
+      ],
+      "title": "order_list.approval_log",
+      "type": "object"
+    },
+    "order_list.approval_log.steps_json_list": {
+      "properties": {
+        "approval_comment": {
+          "title": "Approval Comment",
+          "type": "string"
+        },
+        "approval_customer_name": {
+          "title": "Approval Customer Name",
+          "type": "string"
+        },
+        "approval_text": {
+          "title": "Approval Text",
+          "type": "string"
+        },
+        "level_text": {
+          "title": "Level Text",
+          "type": "string"
+        },
+        "mail_skipped": {
+          "title": "Mail Skipped",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "approval_comment",
+        "approval_customer_name",
+        "approval_text",
+        "level_text",
+        "mail_skipped"
+      ],
+      "title": "order_list.approval_log.steps_json_list",
+      "type": "object"
+    },
+    "order_list.order": {
+      "properties": {
+        "delivery_date_text": {
+          "title": "Delivery Date Text",
+          "type": "string"
+        },
+        "return_date_text": {
+          "title": "Return Date Text",
+          "type": "string"
+        },
+        "trans": {
+          "$ref": "#/$defs/order_list.order.trans"
+        }
+      },
+      "required": [
+        "delivery_date_text",
+        "return_date_text",
+        "trans"
+      ],
+      "title": "order_list.order",
+      "type": "object"
+    },
+    "order_list.order.trans": {
+      "properties": {
+        "or_code": {
+          "title": "Or Code",
+          "type": "string"
+        },
+        "shipping_method_label": {
+          "title": "Shipping Method Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "or_code",
+        "shipping_method_label"
+      ],
+      "title": "order_list.order.trans",
+      "type": "object"
+    },
+    "order_list.rent_items": {
+      "properties": {
+        "option_text": {
+          "title": "Option Text",
+          "type": "string"
+        },
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "source_product_code": {
+          "title": "Source Product Code",
+          "type": "string"
+        },
+        "user_holder_name": {
+          "title": "User Holder Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_name",
+        "quantity",
+        "source_product_code",
+        "user_holder_name"
+      ],
+      "title": "order_list.rent_items",
+      "type": "object"
+    },
+    "order_list.sale_items": {
+      "properties": {
+        "option_text": {
+          "title": "Option Text",
+          "type": "string"
+        },
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "source_product_code": {
+          "title": "Source Product Code",
+          "type": "string"
+        },
+        "user_holder_name": {
+          "title": "User Holder Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_name",
+        "quantity",
+        "source_product_code",
+        "user_holder_name"
+      ],
+      "title": "order_list.sale_items",
+      "type": "object"
+    },
+    "request_info": {
+      "properties": {
+        "attendant_name": {
+          "title": "Attendant Name",
+          "type": "string"
+        },
+        "attendant_phone": {
+          "title": "Attendant Phone",
+          "type": "string"
+        },
+        "maps_count_text": {
+          "title": "Maps Count Text",
+          "type": "string"
+        },
+        "other_request": {
+          "title": "Other Request",
+          "type": "string"
+        },
+        "pic_name_with_honorific": {
+          "title": "Pic Name With Honorific",
+          "type": "string"
+        },
+        "pic_phone": {
+          "title": "Pic Phone",
+          "type": "string"
+        },
+        "shipping_method_label": {
+          "title": "Shipping Method Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "maps_count_text",
+        "other_request",
+        "pic_name_with_honorific",
+        "pic_phone",
+        "shipping_method_label"
+      ],
+      "title": "request_info",
+      "type": "object"
+    },
+    "site": {
+      "properties": {
+        "branch_client_name": {
+          "title": "Branch Client Name",
+          "type": "string"
+        },
+        "full_address": {
+          "title": "Full Address",
+          "type": "string"
+        },
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/site.sale_office"
+        }
+      },
+      "required": [
+        "branch_client_name",
+        "full_address",
+        "name_with_label",
+        "sale_office"
+      ],
+      "title": "site",
+      "type": "object"
+    },
+    "site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "site.sale_office",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "btn_footer_text": {
+      "title": "Btn Footer Text",
+      "type": "string"
+    },
+    "header_text": {
+      "title": "Header Text",
+      "type": "string"
+    },
+    "header_title": {
+      "title": "Header Title",
+      "type": "string"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "order_items": {
+      "items": {
+        "$ref": "#/$defs/order_items"
+      },
+      "title": "Order Items",
+      "type": "array"
+    },
+    "order_list": {
+      "items": {
+        "$ref": "#/$defs/order_list"
+      },
+      "title": "Order List",
+      "type": "array"
+    },
+    "request_info": {
+      "$ref": "#/$defs/request_info"
+    },
+    "selected_remarks": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Selected Remarks",
+      "type": "array"
+    },
+    "site": {
+      "$ref": "#/$defs/site"
+    },
+    "subject_text": {
+      "title": "Subject Text",
+      "type": "string"
+    },
+    "transaction_type_text": {
+      "title": "Transaction Type Text",
+      "type": "string"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "btn_footer_text",
+    "header_text",
+    "header_title",
+    "notification_setting",
+    "order_items",
+    "order_list",
+    "request_info",
+    "selected_remarks",
+    "site",
+    "subject_text",
+    "transaction_type_text"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

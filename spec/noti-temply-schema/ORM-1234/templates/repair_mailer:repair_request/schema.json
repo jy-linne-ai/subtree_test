@@ -1,0 +1,255 @@
+{
+  "$defs": {
+    "request_info": {
+      "properties": {
+        "attendant_name": {
+          "title": "Attendant Name",
+          "type": "string"
+        },
+        "attendant_phone": {
+          "title": "Attendant Phone",
+          "type": "string"
+        },
+        "other_request": {
+          "title": "Other Request",
+          "type": "string"
+        },
+        "pic_name_with_honorific": {
+          "title": "Pic Name With Honorific",
+          "type": "string"
+        },
+        "pic_phone": {
+          "title": "Pic Phone",
+          "type": "string"
+        },
+        "repair_item": {
+          "$ref": "#/$defs/request_info.repair_item"
+        }
+      },
+      "required": [
+        "attendant_name",
+        "attendant_phone",
+        "other_request",
+        "pic_name_with_honorific",
+        "pic_phone",
+        "repair_item"
+      ],
+      "title": "request_info",
+      "type": "object"
+    },
+    "request_info.repair_item": {
+      "properties": {
+        "failure_description": {
+          "title": "Failure Description",
+          "type": "string"
+        },
+        "field_position": {
+          "title": "Field Position",
+          "type": "string"
+        },
+        "onsite_parking_text": {
+          "title": "Onsite Parking Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "failure_description",
+        "field_position",
+        "onsite_parking_text"
+      ],
+      "title": "request_info.repair_item",
+      "type": "object"
+    },
+    "site": {
+      "properties": {
+        "full_address": {
+          "title": "Full Address",
+          "type": "string"
+        },
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "or_branch_client_name": {
+          "title": "Or Branch Client Name",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/site.sale_office"
+        }
+      },
+      "required": [
+        "full_address",
+        "name_with_label",
+        "or_branch_client_name"
+      ],
+      "title": "site",
+      "type": "object"
+    },
+    "site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "phone"
+      ],
+      "title": "site.sale_office",
+      "type": "object"
+    },
+    "tenant": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/$defs/tenant.settings"
+        }
+      },
+      "required": [
+        "name",
+        "settings"
+      ],
+      "title": "tenant",
+      "type": "object"
+    },
+    "tenant.settings": {
+      "properties": {
+        "service": {
+          "$ref": "#/$defs/tenant.settings.service"
+        }
+      },
+      "required": [
+        "service"
+      ],
+      "title": "tenant.settings",
+      "type": "object"
+    },
+    "tenant.settings.service": {
+      "properties": {
+        "theme_color_json": {
+          "$ref": "#/$defs/tenant.settings.service.theme_color_json"
+        },
+        "theme_logo_url": {
+          "title": "Theme Logo Url",
+          "type": "string"
+        },
+        "theme_rentals_logo_url": {
+          "title": "Theme Rentals Logo Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "theme_color_json",
+        "theme_logo_url",
+        "theme_rentals_logo_url"
+      ],
+      "title": "tenant.settings.service",
+      "type": "object"
+    },
+    "tenant.settings.service.theme_color_json": {
+      "properties": {
+        "email_header_bg_color": {
+          "title": "Email Header Bg Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email_header_bg_color"
+      ],
+      "title": "tenant.settings.service.theme_color_json",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "available_on_sp_logo": {
+      "title": "Available On Sp Logo",
+      "type": "boolean"
+    },
+    "btn_footer_label": {
+      "title": "Btn Footer Label",
+      "type": "string"
+    },
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "chat_url": {
+      "title": "Chat Url"
+    },
+    "histories_url": {
+      "title": "Histories Url"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "onboarding_url": {
+      "title": "Onboarding Url",
+      "type": "string"
+    },
+    "order_number": {
+      "title": "Order Number",
+      "type": "string"
+    },
+    "original_product_code": {
+      "title": "Original Product Code",
+      "type": "string"
+    },
+    "product_name": {
+      "title": "Product Name",
+      "type": "string"
+    },
+    "repair_support_date_text": {
+      "title": "Repair Support Date Text",
+      "type": "string"
+    },
+    "request_info": {
+      "$ref": "#/$defs/request_info"
+    },
+    "selected_remarks": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Selected Remarks",
+      "type": "array"
+    },
+    "site": {
+      "$ref": "#/$defs/site"
+    },
+    "start_guide_url": {
+      "title": "Start Guide Url",
+      "type": "string"
+    },
+    "tenant": {
+      "$ref": "#/$defs/tenant"
+    },
+    "trans_type": {
+      "title": "Trans Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "available_on_sp_logo",
+    "btn_footer_label",
+    "btn_footer_link",
+    "order_number",
+    "original_product_code",
+    "product_name",
+    "repair_support_date_text",
+    "request_info",
+    "selected_remarks",
+    "site",
+    "tenant"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

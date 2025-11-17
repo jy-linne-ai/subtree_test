@@ -1,0 +1,23 @@
+{
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "download_url": {
+      "title": "Download Url",
+      "type": "string"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "download_url",
+    "notification_setting"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

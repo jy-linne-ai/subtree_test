@@ -1,0 +1,285 @@
+{
+  "$defs": {
+    "order_items": {
+      "properties": {
+        "item_product_code": {
+          "title": "Item Product Code",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "item_product_code",
+        "quantity"
+      ],
+      "title": "order_items",
+      "type": "object"
+    },
+    "order_list": {
+      "properties": {
+        "order": {
+          "$ref": "#/$defs/order_list.order"
+        }
+      },
+      "required": [
+        "order"
+      ],
+      "title": "order_list",
+      "type": "object"
+    },
+    "order_list.order": {
+      "properties": {
+        "delivery_date_text": {
+          "title": "Delivery Date Text",
+          "type": "string"
+        },
+        "trans": {
+          "$ref": "#/$defs/order_list.order.trans"
+        }
+      },
+      "required": [
+        "delivery_date_text",
+        "trans"
+      ],
+      "title": "order_list.order",
+      "type": "object"
+    },
+    "order_list.order.trans": {
+      "properties": {
+        "shipping_method_label": {
+          "title": "Shipping Method Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "shipping_method_label"
+      ],
+      "title": "order_list.order.trans",
+      "type": "object"
+    },
+    "request_info": {
+      "properties": {
+        "pic_name_with_honorific": {
+          "title": "Pic Name With Honorific",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pic_name_with_honorific"
+      ],
+      "title": "request_info",
+      "type": "object"
+    },
+    "site": {
+      "properties": {
+        "branch_client_name": {
+          "title": "Branch Client Name",
+          "type": "string"
+        },
+        "branch_name": {
+          "title": "Branch Name",
+          "type": "string"
+        },
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "pic_name": {
+          "title": "Pic Name",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/site.sale_office"
+        }
+      },
+      "required": [
+        "branch_client_name",
+        "branch_name",
+        "name_with_label",
+        "pic_name",
+        "sale_office"
+      ],
+      "title": "site",
+      "type": "object"
+    },
+    "site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "site.sale_office",
+      "type": "object"
+    },
+    "system_message": {
+      "properties": {
+        "body": {
+          "$ref": "#/$defs/system_message.body"
+        },
+        "topic_id": {
+          "title": "Topic Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "body",
+        "topic_id"
+      ],
+      "title": "system_message",
+      "type": "object"
+    },
+    "system_message.body": {
+      "properties": {
+        "changes": {
+          "items": {
+            "$ref": "#/$defs/system_message.body.changes"
+          },
+          "title": "Changes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "changes"
+      ],
+      "title": "system_message.body",
+      "type": "object"
+    },
+    "system_message.body.changes": {
+      "properties": {
+        "details": {
+          "items": {
+            "$ref": "#/$defs/system_message.body.changes.details"
+          },
+          "title": "Details",
+          "type": "array"
+        },
+        "header": {
+          "title": "Header",
+          "type": "string"
+        }
+      },
+      "required": [
+        "details",
+        "header"
+      ],
+      "title": "system_message.body.changes",
+      "type": "object"
+    },
+    "system_message.body.changes.details": {
+      "properties": {
+        "after": {
+          "title": "After",
+          "type": "string"
+        },
+        "before": {
+          "title": "Before",
+          "type": "string"
+        },
+        "product": {
+          "$ref": "#/$defs/system_message.body.changes.details.product"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "after",
+        "before",
+        "product",
+        "text"
+      ],
+      "title": "system_message.body.changes.details",
+      "type": "object"
+    },
+    "system_message.body.changes.details.product": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "system_message.body.changes.details.product",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "header_text": {
+      "title": "Header Text",
+      "type": "string"
+    },
+    "header_title": {
+      "title": "Header Title",
+      "type": "string"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "order_items": {
+      "items": {
+        "$ref": "#/$defs/order_items"
+      },
+      "title": "Order Items",
+      "type": "array"
+    },
+    "order_list": {
+      "items": {
+        "$ref": "#/$defs/order_list"
+      },
+      "title": "Order List",
+      "type": "array"
+    },
+    "order_number": {
+      "title": "Order Number",
+      "type": "string"
+    },
+    "request_info": {
+      "$ref": "#/$defs/request_info"
+    },
+    "site": {
+      "$ref": "#/$defs/site"
+    },
+    "subject_text": {
+      "title": "Subject Text",
+      "type": "string"
+    },
+    "system_message": {
+      "$ref": "#/$defs/system_message"
+    },
+    "transaction_type": {
+      "title": "Transaction Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "header_text",
+    "header_title",
+    "notification_setting",
+    "order_items",
+    "order_list",
+    "order_number",
+    "request_info",
+    "site",
+    "subject_text",
+    "system_message",
+    "transaction_type"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

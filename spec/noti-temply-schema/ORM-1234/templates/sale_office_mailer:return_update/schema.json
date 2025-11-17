@@ -1,0 +1,264 @@
+{
+  "$defs": {
+    "request_info": {
+      "properties": {
+        "pic_name_with_honorific": {
+          "title": "Pic Name With Honorific",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pic_name_with_honorific"
+      ],
+      "title": "request_info",
+      "type": "object"
+    },
+    "return_data": {
+      "properties": {
+        "return_date_text": {
+          "title": "Return Date Text",
+          "type": "string"
+        },
+        "trans": {
+          "$ref": "#/$defs/return_data.trans"
+        }
+      },
+      "required": [
+        "return_date_text",
+        "trans"
+      ],
+      "title": "return_data",
+      "type": "object"
+    },
+    "return_data.trans": {
+      "properties": {
+        "shipping_method_label": {
+          "title": "Shipping Method Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "shipping_method_label"
+      ],
+      "title": "return_data.trans",
+      "type": "object"
+    },
+    "return_items": {
+      "properties": {
+        "item_product_code": {
+          "title": "Item Product Code",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "item_product_code",
+        "quantity"
+      ],
+      "title": "return_items",
+      "type": "object"
+    },
+    "site": {
+      "properties": {
+        "branch_client_name": {
+          "title": "Branch Client Name",
+          "type": "string"
+        },
+        "branch_name": {
+          "title": "Branch Name",
+          "type": "string"
+        },
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "pic_name": {
+          "title": "Pic Name",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/site.sale_office"
+        }
+      },
+      "required": [
+        "branch_client_name",
+        "branch_name",
+        "name_with_label",
+        "pic_name",
+        "sale_office"
+      ],
+      "title": "site",
+      "type": "object"
+    },
+    "site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "site.sale_office",
+      "type": "object"
+    },
+    "system_message": {
+      "properties": {
+        "body": {
+          "$ref": "#/$defs/system_message.body"
+        },
+        "topic_id": {
+          "title": "Topic Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "body",
+        "topic_id"
+      ],
+      "title": "system_message",
+      "type": "object"
+    },
+    "system_message.body": {
+      "properties": {
+        "changes": {
+          "items": {
+            "$ref": "#/$defs/system_message.body.changes"
+          },
+          "title": "Changes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "changes"
+      ],
+      "title": "system_message.body",
+      "type": "object"
+    },
+    "system_message.body.changes": {
+      "properties": {
+        "details": {
+          "items": {
+            "$ref": "#/$defs/system_message.body.changes.details"
+          },
+          "title": "Details",
+          "type": "array"
+        },
+        "header": {
+          "title": "Header",
+          "type": "string"
+        }
+      },
+      "required": [
+        "details",
+        "header"
+      ],
+      "title": "system_message.body.changes",
+      "type": "object"
+    },
+    "system_message.body.changes.details": {
+      "properties": {
+        "after": {
+          "title": "After",
+          "type": "string"
+        },
+        "before": {
+          "title": "Before",
+          "type": "string"
+        },
+        "product": {
+          "$ref": "#/$defs/system_message.body.changes.details.product"
+        },
+        "text": {
+          "title": "Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "after",
+        "before",
+        "product",
+        "text"
+      ],
+      "title": "system_message.body.changes.details",
+      "type": "object"
+    },
+    "system_message.body.changes.details.product": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "system_message.body.changes.details.product",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "header_text": {
+      "title": "Header Text",
+      "type": "string"
+    },
+    "header_title": {
+      "title": "Header Title",
+      "type": "string"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "order_number": {
+      "title": "Order Number",
+      "type": "string"
+    },
+    "request_info": {
+      "$ref": "#/$defs/request_info"
+    },
+    "return_data": {
+      "$ref": "#/$defs/return_data"
+    },
+    "return_items": {
+      "items": {
+        "$ref": "#/$defs/return_items"
+      },
+      "title": "Return Items",
+      "type": "array"
+    },
+    "site": {
+      "$ref": "#/$defs/site"
+    },
+    "system_message": {
+      "$ref": "#/$defs/system_message"
+    },
+    "transaction_type": {
+      "title": "Transaction Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "header_text",
+    "header_title",
+    "notification_setting",
+    "order_number",
+    "request_info",
+    "return_data",
+    "return_items",
+    "site",
+    "system_message",
+    "transaction_type"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

@@ -1,0 +1,121 @@
+{
+  "$defs": {
+    "rental_site": {
+      "properties": {
+        "site_address": {
+          "title": "Site Address",
+          "type": "string"
+        },
+        "site_name": {
+          "title": "Site Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "site_address",
+        "site_name"
+      ],
+      "title": "rental_site",
+      "type": "object"
+    },
+    "request_client_info": {
+      "properties": {
+        "client_address": {
+          "title": "Client Address",
+          "type": "string"
+        },
+        "client_address_suffix": {
+          "title": "Client Address Suffix",
+          "type": "string"
+        },
+        "client_name": {
+          "title": "Client Name",
+          "type": "string"
+        },
+        "client_phone_number": {
+          "title": "Client Phone Number",
+          "type": "string"
+        },
+        "client_postal_code": {
+          "title": "Client Postal Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "client_address",
+        "client_address_suffix",
+        "client_name",
+        "client_phone_number",
+        "client_postal_code"
+      ],
+      "title": "request_client_info",
+      "type": "object"
+    },
+    "request_info": {
+      "properties": {
+        "other_request": {
+          "title": "Other Request",
+          "type": "string"
+        },
+        "pic_name": {
+          "title": "Pic Name",
+          "type": "string"
+        },
+        "pic_phone": {
+          "title": "Pic Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "other_request",
+        "pic_name",
+        "pic_phone"
+      ],
+      "title": "request_info",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "after_office_name": {
+      "title": "After Office Name",
+      "type": "string"
+    },
+    "before_office_name": {
+      "title": "Before Office Name",
+      "type": "string"
+    },
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "email": {
+      "title": "Email",
+      "type": "string"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "rental_site": {
+      "$ref": "#/$defs/rental_site"
+    },
+    "request_client_info": {
+      "$ref": "#/$defs/request_client_info"
+    },
+    "request_info": {
+      "$ref": "#/$defs/request_info"
+    }
+  },
+  "required": [
+    "after_office_name",
+    "before_office_name",
+    "btn_footer_link",
+    "email",
+    "notification_setting",
+    "rental_site",
+    "request_client_info",
+    "request_info"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

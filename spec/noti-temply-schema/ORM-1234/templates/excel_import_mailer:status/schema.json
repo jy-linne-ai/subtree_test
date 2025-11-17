@@ -1,0 +1,137 @@
+{
+  "$defs": {
+    "import.anyOf.0": {
+      "properties": {
+        "final_update": {
+          "title": "Final Update",
+          "type": "integer"
+        },
+        "main_file": {
+          "$ref": "#/$defs/import.anyOf.0.main_file"
+        },
+        "status": {
+          "title": "Status",
+          "type": "string"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "final_update",
+        "main_file",
+        "status",
+        "type"
+      ],
+      "title": "import.anyOf.0",
+      "type": "object"
+    },
+    "import.anyOf.0.main_file": {
+      "properties": {
+        "file_name": {
+          "title": "File Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file_name"
+      ],
+      "title": "import.anyOf.0.main_file",
+      "type": "object"
+    },
+    "import.anyOf.1": {
+      "properties": {
+        "final_new": {
+          "title": "Final New",
+          "type": "integer"
+        },
+        "final_update": {
+          "title": "Final Update",
+          "type": "integer"
+        },
+        "main_file": {
+          "$ref": "#/$defs/import.anyOf.1.main_file"
+        },
+        "status": {
+          "title": "Status",
+          "type": "string"
+        },
+        "type": {
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "final_new",
+        "final_update",
+        "main_file",
+        "status",
+        "type"
+      ],
+      "title": "import.anyOf.1",
+      "type": "object"
+    },
+    "import.anyOf.1.main_file": {
+      "properties": {
+        "file_name": {
+          "title": "File Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "file_name"
+      ],
+      "title": "import.anyOf.1.main_file",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "header_text": {
+      "title": "Header Text",
+      "type": "string"
+    },
+    "header_title": {
+      "title": "Header Title",
+      "type": "string"
+    },
+    "import": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/import.anyOf.0"
+        },
+        {
+          "$ref": "#/$defs/import.anyOf.1"
+        }
+      ],
+      "title": "Import"
+    },
+    "import_num_label": {
+      "title": "Import Num Label",
+      "type": "string"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "type_name": {
+      "title": "Type Name",
+      "type": "string"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "header_text",
+    "header_title",
+    "import",
+    "import_num_label",
+    "notification_setting",
+    "type_name"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

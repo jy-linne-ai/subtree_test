@@ -1,0 +1,57 @@
+{
+  "$defs": {
+    "office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "office",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "counts": {
+      "title": "Counts",
+      "type": "integer"
+    },
+    "header_text": {
+      "title": "Header Text",
+      "type": "string"
+    },
+    "mail_subject": {
+      "title": "Mail Subject",
+      "type": "string"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "office": {
+      "$ref": "#/$defs/office"
+    },
+    "succeeded": {
+      "title": "Succeeded",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "counts",
+    "header_text",
+    "mail_subject",
+    "notification_setting",
+    "office",
+    "succeeded"
+  ],
+  "title": "Schema",
+  "type": "object"
+}
