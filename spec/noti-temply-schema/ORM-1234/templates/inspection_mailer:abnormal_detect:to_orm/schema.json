@@ -1,0 +1,83 @@
+{
+  "$defs": {
+    "site": {
+      "properties": {
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name_with_label"
+      ],
+      "title": "site",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "inspection_date_text": {
+      "title": "Inspection Date Text",
+      "type": "string"
+    },
+    "inspector_name": {
+      "title": "Inspector Name",
+      "type": "string"
+    },
+    "maker_name": {
+      "title": "Maker Name",
+      "type": "string"
+    },
+    "model_type_code": {
+      "title": "Model Type Code",
+      "type": "string"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "original_product_code": {
+      "title": "Original Product Code",
+      "type": "string"
+    },
+    "product_name": {
+      "title": "Product Name",
+      "type": "string"
+    },
+    "remark": {
+      "title": "Remark",
+      "type": "string"
+    },
+    "rental_location_name": {
+      "title": "Rental Location Name",
+      "type": "string"
+    },
+    "rental_no": {
+      "title": "Rental No",
+      "type": "string"
+    },
+    "site": {
+      "$ref": "#/$defs/site"
+    },
+    "user_holder_name": {
+      "title": "User Holder Name",
+      "type": "string"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "inspection_date_text",
+    "inspector_name",
+    "notification_setting",
+    "original_product_code",
+    "product_name",
+    "rental_no",
+    "site",
+    "user_holder_name"
+  ],
+  "title": "Schema",
+  "type": "object"
+}
