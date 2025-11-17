@@ -1,0 +1,248 @@
+{
+  "$defs": {
+    "site": {
+      "properties": {
+        "sale_office": {
+          "$ref": "#/$defs/site.sale_office"
+        }
+      },
+      "title": "site",
+      "type": "object"
+    },
+    "site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "phone"
+      ],
+      "title": "site.sale_office",
+      "type": "object"
+    },
+    "site_request": {
+      "properties": {
+        "client": {
+          "$ref": "#/$defs/site_request.client"
+        },
+        "site": {
+          "$ref": "#/$defs/site_request.site"
+        },
+        "site_contact_personnel": {
+          "$ref": "#/$defs/site_request.site_contact_personnel"
+        }
+      },
+      "required": [
+        "client",
+        "site",
+        "site_contact_personnel"
+      ],
+      "title": "site_request",
+      "type": "object"
+    },
+    "site_request.client": {
+      "properties": {
+        "client_address_suffix": {
+          "title": "Client Address Suffix",
+          "type": "string"
+        },
+        "client_name": {
+          "title": "Client Name",
+          "type": "string"
+        },
+        "client_phone_number": {
+          "title": "Client Phone Number",
+          "type": "string"
+        },
+        "client_postal_code": {
+          "title": "Client Postal Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "client_address_suffix",
+        "client_name",
+        "client_phone_number",
+        "client_postal_code"
+      ],
+      "title": "site_request.client",
+      "type": "object"
+    },
+    "site_request.site": {
+      "properties": {
+        "address_text": {
+          "title": "Address Text",
+          "type": "string"
+        },
+        "site_name": {
+          "title": "Site Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "address_text",
+        "site_name"
+      ],
+      "title": "site_request.site",
+      "type": "object"
+    },
+    "site_request.site_contact_personnel": {
+      "properties": {
+        "family_name": {
+          "title": "Family Name",
+          "type": "string"
+        },
+        "phone_number": {
+          "title": "Phone Number",
+          "type": "string"
+        }
+      },
+      "required": [
+        "family_name",
+        "phone_number"
+      ],
+      "title": "site_request.site_contact_personnel",
+      "type": "object"
+    },
+    "tenant": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/$defs/tenant.settings"
+        }
+      },
+      "required": [
+        "name",
+        "settings"
+      ],
+      "title": "tenant",
+      "type": "object"
+    },
+    "tenant.settings": {
+      "properties": {
+        "service": {
+          "$ref": "#/$defs/tenant.settings.service"
+        }
+      },
+      "required": [
+        "service"
+      ],
+      "title": "tenant.settings",
+      "type": "object"
+    },
+    "tenant.settings.service": {
+      "properties": {
+        "theme_color_json": {
+          "$ref": "#/$defs/tenant.settings.service.theme_color_json"
+        },
+        "theme_logo_url": {
+          "title": "Theme Logo Url",
+          "type": "string"
+        },
+        "theme_rentals_logo_url": {
+          "title": "Theme Rentals Logo Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "theme_color_json",
+        "theme_logo_url",
+        "theme_rentals_logo_url"
+      ],
+      "title": "tenant.settings.service",
+      "type": "object"
+    },
+    "tenant.settings.service.theme_color_json": {
+      "properties": {
+        "email_header_bg_color": {
+          "title": "Email Header Bg Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email_header_bg_color"
+      ],
+      "title": "tenant.settings.service.theme_color_json",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "available_on_sp_logo": {
+      "title": "Available On Sp Logo",
+      "type": "boolean"
+    },
+    "chat_url": {
+      "title": "Chat Url"
+    },
+    "client_address_1": {
+      "title": "Client Address 1",
+      "type": "string"
+    },
+    "email": {
+      "title": "Email",
+      "type": "string"
+    },
+    "given_name": {
+      "title": "Given Name",
+      "type": "string"
+    },
+    "histories_url": {
+      "title": "Histories Url"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "office_name": {
+      "title": "Office Name",
+      "type": "string"
+    },
+    "onboarding_url": {
+      "title": "Onboarding Url",
+      "type": "string"
+    },
+    "other_request": {
+      "title": "Other Request",
+      "type": "string"
+    },
+    "site": {
+      "$ref": "#/$defs/site"
+    },
+    "site_request": {
+      "$ref": "#/$defs/site_request"
+    },
+    "start_guide_url": {
+      "title": "Start Guide Url",
+      "type": "string"
+    },
+    "tenant": {
+      "$ref": "#/$defs/tenant"
+    },
+    "trans_type": {
+      "title": "Trans Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "available_on_sp_logo",
+    "client_address_1",
+    "email",
+    "given_name",
+    "office_name",
+    "other_request",
+    "site_request",
+    "tenant"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

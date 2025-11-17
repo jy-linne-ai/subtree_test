@@ -1,0 +1,74 @@
+{
+  "$defs": {
+    "anyOf.0": {
+      "properties": {
+        "btn_footer_link": {
+          "title": "Btn Footer Link",
+          "type": "string"
+        },
+        "counts": {
+          "title": "Counts",
+          "type": "integer"
+        },
+        "download_url": {
+          "title": "Download Url",
+          "type": "string"
+        },
+        "notification_setting": {
+          "title": "Notification Setting",
+          "type": "string"
+        },
+        "succeeded": {
+          "title": "Succeeded",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "btn_footer_link",
+        "counts",
+        "download_url",
+        "notification_setting",
+        "succeeded"
+      ],
+      "title": "anyOf.0",
+      "type": "object"
+    },
+    "anyOf.1": {
+      "properties": {
+        "btn_footer_link": {
+          "title": "Btn Footer Link",
+          "type": "string"
+        },
+        "counts": {
+          "title": "Counts",
+          "type": "integer"
+        },
+        "notification_setting": {
+          "title": "Notification Setting",
+          "type": "string"
+        },
+        "succeeded": {
+          "title": "Succeeded",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "btn_footer_link",
+        "counts",
+        "notification_setting",
+        "succeeded"
+      ],
+      "title": "anyOf.1",
+      "type": "object"
+    }
+  },
+  "anyOf": [
+    {
+      "$ref": "#/$defs/anyOf.0"
+    },
+    {
+      "$ref": "#/$defs/anyOf.1"
+    }
+  ],
+  "title": "Schema"
+}

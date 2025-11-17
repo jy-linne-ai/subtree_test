@@ -1,0 +1,640 @@
+{
+  "$defs": {
+    "anyOf.0": {
+      "properties": {
+        "after_office_name": {
+          "title": "After Office Name",
+          "type": "string"
+        },
+        "before_office_name": {
+          "title": "Before Office Name",
+          "type": "string"
+        },
+        "btn_footer_link": {
+          "title": "Btn Footer Link",
+          "type": "string"
+        },
+        "estimate_list": {
+          "items": {},
+          "title": "Estimate List",
+          "type": "array"
+        },
+        "full_address": {
+          "title": "Full Address",
+          "type": "string"
+        },
+        "notification_setting": {
+          "title": "Notification Setting",
+          "type": "string"
+        },
+        "office_name_from": {
+          "title": "Office Name From",
+          "type": "string"
+        },
+        "office_name_to": {
+          "title": "Office Name To",
+          "type": "string"
+        },
+        "order_list": {
+          "items": {},
+          "title": "Order List",
+          "type": "array"
+        },
+        "other_request_info": {
+          "title": "Other Request Info",
+          "type": "string"
+        },
+        "pic_name": {
+          "title": "Pic Name",
+          "type": "string"
+        },
+        "request": {
+          "$ref": "#/$defs/anyOf.0.request"
+        },
+        "site_map_info": {
+          "title": "Site Map Info",
+          "type": "string"
+        }
+      },
+      "required": [
+        "after_office_name",
+        "before_office_name",
+        "btn_footer_link",
+        "estimate_list",
+        "full_address",
+        "notification_setting",
+        "office_name_from",
+        "office_name_to",
+        "order_list",
+        "other_request_info",
+        "pic_name",
+        "request",
+        "site_map_info"
+      ],
+      "title": "anyOf.0",
+      "type": "object"
+    },
+    "anyOf.0.request": {
+      "properties": {
+        "branch": {
+          "$ref": "#/$defs/anyOf.0.request.branch"
+        },
+        "request_info": {
+          "$ref": "#/$defs/anyOf.0.request.request_info"
+        },
+        "site": {
+          "$ref": "#/$defs/anyOf.0.request.site"
+        },
+        "temporary_rental_site_code": {
+          "title": "Temporary Rental Site Code",
+          "type": "string"
+        },
+        "user": {
+          "$ref": "#/$defs/anyOf.0.request.user"
+        }
+      },
+      "required": [
+        "branch",
+        "request_info",
+        "site",
+        "temporary_rental_site_code",
+        "user"
+      ],
+      "title": "anyOf.0.request",
+      "type": "object"
+    },
+    "anyOf.0.request.branch": {
+      "properties": {
+        "client": {
+          "$ref": "#/$defs/anyOf.0.request.branch.client"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "client",
+        "name"
+      ],
+      "title": "anyOf.0.request.branch",
+      "type": "object"
+    },
+    "anyOf.0.request.branch.client": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "anyOf.0.request.branch.client",
+      "type": "object"
+    },
+    "anyOf.0.request.request_info": {
+      "properties": {
+        "pic_phone": {
+          "title": "Pic Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pic_phone"
+      ],
+      "title": "anyOf.0.request.request_info",
+      "type": "object"
+    },
+    "anyOf.0.request.site": {
+      "properties": {
+        "branch_client_name": {
+          "title": "Branch Client Name",
+          "type": "string"
+        },
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "branch_client_name",
+        "name_with_label"
+      ],
+      "title": "anyOf.0.request.site",
+      "type": "object"
+    },
+    "anyOf.0.request.user": {
+      "properties": {
+        "email": {
+          "title": "Email",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email"
+      ],
+      "title": "anyOf.0.request.user",
+      "type": "object"
+    },
+    "anyOf.1": {
+      "properties": {
+        "after_office_name": {
+          "title": "After Office Name",
+          "type": "string"
+        },
+        "before_office_name": {
+          "title": "Before Office Name",
+          "type": "string"
+        },
+        "btn_footer_link": {
+          "title": "Btn Footer Link",
+          "type": "string"
+        },
+        "estimate_list": {
+          "items": {
+            "$ref": "#/$defs/anyOf.1.estimate_list"
+          },
+          "title": "Estimate List",
+          "type": "array"
+        },
+        "full_address": {
+          "title": "Full Address",
+          "type": "string"
+        },
+        "notification_setting": {
+          "title": "Notification Setting",
+          "type": "string"
+        },
+        "office_name_from": {
+          "title": "Office Name From",
+          "type": "string"
+        },
+        "office_name_to": {
+          "title": "Office Name To",
+          "type": "string"
+        },
+        "order_list": {
+          "items": {
+            "$ref": "#/$defs/anyOf.1.order_list"
+          },
+          "title": "Order List",
+          "type": "array"
+        },
+        "other_request_info": {
+          "title": "Other Request Info",
+          "type": "string"
+        },
+        "pic_name": {
+          "title": "Pic Name",
+          "type": "string"
+        },
+        "request": {
+          "$ref": "#/$defs/anyOf.1.request"
+        },
+        "request_type_text": {
+          "title": "Request Type Text",
+          "type": "string"
+        },
+        "site_map_info": {
+          "title": "Site Map Info",
+          "type": "string"
+        }
+      },
+      "required": [
+        "after_office_name",
+        "before_office_name",
+        "btn_footer_link",
+        "estimate_list",
+        "full_address",
+        "notification_setting",
+        "office_name_from",
+        "office_name_to",
+        "order_list",
+        "other_request_info",
+        "pic_name",
+        "request",
+        "request_type_text",
+        "site_map_info"
+      ],
+      "title": "anyOf.1",
+      "type": "object"
+    },
+    "anyOf.1.estimate_list": {
+      "properties": {
+        "delivery_date_title": {
+          "title": "Delivery Date Title",
+          "type": "string"
+        },
+        "detail_url": {
+          "title": "Detail Url",
+          "type": "string"
+        },
+        "estimate": {
+          "$ref": "#/$defs/anyOf.1.estimate_list.estimate"
+        },
+        "rent_items": {
+          "items": {
+            "$ref": "#/$defs/anyOf.1.estimate_list.rent_items"
+          },
+          "title": "Rent Items",
+          "type": "array"
+        },
+        "sale_items": {
+          "items": {
+            "$ref": "#/$defs/anyOf.1.estimate_list.sale_items"
+          },
+          "title": "Sale Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "delivery_date_title",
+        "detail_url",
+        "estimate",
+        "rent_items",
+        "sale_items"
+      ],
+      "title": "anyOf.1.estimate_list",
+      "type": "object"
+    },
+    "anyOf.1.estimate_list.estimate": {
+      "properties": {
+        "delivery_date_text": {
+          "title": "Delivery Date Text",
+          "type": "string"
+        },
+        "trans": {
+          "$ref": "#/$defs/anyOf.1.estimate_list.estimate.trans"
+        }
+      },
+      "required": [
+        "delivery_date_text",
+        "trans"
+      ],
+      "title": "anyOf.1.estimate_list.estimate",
+      "type": "object"
+    },
+    "anyOf.1.estimate_list.estimate.trans": {
+      "properties": {
+        "or_code": {
+          "title": "Or Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "or_code"
+      ],
+      "title": "anyOf.1.estimate_list.estimate.trans",
+      "type": "object"
+    },
+    "anyOf.1.estimate_list.rent_items": {
+      "properties": {
+        "option_text": {
+          "title": "Option Text",
+          "type": "string"
+        },
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "source_product_code": {
+          "title": "Source Product Code",
+          "type": "string"
+        },
+        "user_holder_name": {
+          "title": "User Holder Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_name",
+        "quantity",
+        "source_product_code",
+        "user_holder_name"
+      ],
+      "title": "anyOf.1.estimate_list.rent_items",
+      "type": "object"
+    },
+    "anyOf.1.estimate_list.sale_items": {
+      "properties": {
+        "option_text": {
+          "title": "Option Text",
+          "type": "string"
+        },
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "source_product_code": {
+          "title": "Source Product Code",
+          "type": "string"
+        },
+        "user_holder_name": {
+          "title": "User Holder Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_name",
+        "quantity",
+        "source_product_code",
+        "user_holder_name"
+      ],
+      "title": "anyOf.1.estimate_list.sale_items",
+      "type": "object"
+    },
+    "anyOf.1.order_list": {
+      "properties": {
+        "delivery_date_title": {
+          "title": "Delivery Date Title",
+          "type": "string"
+        },
+        "detail_url": {
+          "title": "Detail Url",
+          "type": "string"
+        },
+        "order": {
+          "$ref": "#/$defs/anyOf.1.order_list.order"
+        },
+        "rent_items": {
+          "items": {
+            "$ref": "#/$defs/anyOf.1.order_list.rent_items"
+          },
+          "title": "Rent Items",
+          "type": "array"
+        },
+        "sale_items": {
+          "items": {
+            "$ref": "#/$defs/anyOf.1.order_list.sale_items"
+          },
+          "title": "Sale Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "delivery_date_title",
+        "detail_url",
+        "order",
+        "rent_items",
+        "sale_items"
+      ],
+      "title": "anyOf.1.order_list",
+      "type": "object"
+    },
+    "anyOf.1.order_list.order": {
+      "properties": {
+        "delivery_date_text": {
+          "title": "Delivery Date Text",
+          "type": "string"
+        },
+        "trans": {
+          "$ref": "#/$defs/anyOf.1.order_list.order.trans"
+        }
+      },
+      "required": [
+        "delivery_date_text",
+        "trans"
+      ],
+      "title": "anyOf.1.order_list.order",
+      "type": "object"
+    },
+    "anyOf.1.order_list.order.trans": {
+      "properties": {
+        "or_code": {
+          "title": "Or Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "or_code"
+      ],
+      "title": "anyOf.1.order_list.order.trans",
+      "type": "object"
+    },
+    "anyOf.1.order_list.rent_items": {
+      "properties": {
+        "option_text": {
+          "title": "Option Text",
+          "type": "string"
+        },
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "source_product_code": {
+          "title": "Source Product Code",
+          "type": "string"
+        },
+        "user_holder_name": {
+          "title": "User Holder Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_name",
+        "quantity",
+        "source_product_code",
+        "user_holder_name"
+      ],
+      "title": "anyOf.1.order_list.rent_items",
+      "type": "object"
+    },
+    "anyOf.1.order_list.sale_items": {
+      "properties": {
+        "option_text": {
+          "title": "Option Text",
+          "type": "string"
+        },
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "source_product_code": {
+          "title": "Source Product Code",
+          "type": "string"
+        },
+        "user_holder_name": {
+          "title": "User Holder Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_name",
+        "quantity",
+        "source_product_code",
+        "user_holder_name"
+      ],
+      "title": "anyOf.1.order_list.sale_items",
+      "type": "object"
+    },
+    "anyOf.1.request": {
+      "properties": {
+        "branch": {
+          "$ref": "#/$defs/anyOf.1.request.branch"
+        },
+        "request_info": {
+          "$ref": "#/$defs/anyOf.1.request.request_info"
+        },
+        "site": {
+          "$ref": "#/$defs/anyOf.1.request.site"
+        },
+        "temporary_rental_site_code": {
+          "title": "Temporary Rental Site Code",
+          "type": "string"
+        },
+        "user": {
+          "$ref": "#/$defs/anyOf.1.request.user"
+        }
+      },
+      "required": [
+        "branch",
+        "request_info",
+        "site",
+        "temporary_rental_site_code",
+        "user"
+      ],
+      "title": "anyOf.1.request",
+      "type": "object"
+    },
+    "anyOf.1.request.branch": {
+      "properties": {
+        "client": {
+          "$ref": "#/$defs/anyOf.1.request.branch.client"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "client",
+        "name"
+      ],
+      "title": "anyOf.1.request.branch",
+      "type": "object"
+    },
+    "anyOf.1.request.branch.client": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "anyOf.1.request.branch.client",
+      "type": "object"
+    },
+    "anyOf.1.request.request_info": {
+      "properties": {
+        "pic_phone": {
+          "title": "Pic Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "pic_phone"
+      ],
+      "title": "anyOf.1.request.request_info",
+      "type": "object"
+    },
+    "anyOf.1.request.site": {
+      "properties": {
+        "branch_client_name": {
+          "title": "Branch Client Name",
+          "type": "string"
+        },
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "branch_client_name",
+        "name_with_label"
+      ],
+      "title": "anyOf.1.request.site",
+      "type": "object"
+    },
+    "anyOf.1.request.user": {
+      "properties": {
+        "email": {
+          "title": "Email",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email"
+      ],
+      "title": "anyOf.1.request.user",
+      "type": "object"
+    }
+  },
+  "anyOf": [
+    {
+      "$ref": "#/$defs/anyOf.0"
+    },
+    {
+      "$ref": "#/$defs/anyOf.1"
+    }
+  ],
+  "title": "Schema"
+}

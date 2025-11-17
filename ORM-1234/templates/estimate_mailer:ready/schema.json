@@ -1,0 +1,428 @@
+{
+  "$defs": {
+    "estimate": {
+      "properties": {
+        "delivery_date_text": {
+          "title": "Delivery Date Text",
+          "type": "string"
+        },
+        "order_number": {
+          "title": "Order Number",
+          "type": "string"
+        },
+        "total_price": {
+          "title": "Total Price",
+          "type": "string"
+        },
+        "trans": {
+          "$ref": "#/$defs/estimate.trans"
+        }
+      },
+      "required": [
+        "delivery_date_text",
+        "order_number",
+        "total_price",
+        "trans"
+      ],
+      "title": "estimate",
+      "type": "object"
+    },
+    "estimate.trans": {
+      "properties": {
+        "shipping_method_label": {
+          "title": "Shipping Method Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "shipping_method_label"
+      ],
+      "title": "estimate.trans",
+      "type": "object"
+    },
+    "estimate_items": {
+      "properties": {
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "product_name",
+        "quantity"
+      ],
+      "title": "estimate_items",
+      "type": "object"
+    },
+    "grouped_items": {
+      "properties": {
+        "header": {
+          "$ref": "#/$defs/grouped_items.header"
+        },
+        "items": {
+          "items": {
+            "$ref": "#/$defs/grouped_items.items"
+          },
+          "title": "Items",
+          "type": "array"
+        }
+      },
+      "required": [
+        "header",
+        "items"
+      ],
+      "title": "grouped_items",
+      "type": "object"
+    },
+    "grouped_items.header": {
+      "properties": {
+        "label": {
+          "title": "Label",
+          "type": "string"
+        }
+      },
+      "title": "grouped_items.header",
+      "type": "object"
+    },
+    "grouped_items.items": {
+      "properties": {
+        "contract_type_text": {
+          "title": "Contract Type Text",
+          "type": "string"
+        },
+        "memo": {
+          "title": "Memo",
+          "type": "string"
+        },
+        "option": {
+          "items": {
+            "$ref": "#/$defs/grouped_items.items.option"
+          },
+          "title": "Option",
+          "type": "array"
+        },
+        "period": {
+          "title": "Period",
+          "type": "string"
+        },
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "source_product_code": {
+          "title": "Source Product Code",
+          "type": "string"
+        },
+        "unit_price": {
+          "title": "Unit Price",
+          "type": "string"
+        },
+        "user_holder_name": {
+          "title": "User Holder Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "contract_type_text",
+        "memo",
+        "period",
+        "product_name",
+        "quantity",
+        "source_product_code",
+        "unit_price",
+        "user_holder_name"
+      ],
+      "title": "grouped_items.items",
+      "type": "object"
+    },
+    "grouped_items.items.option": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "value": {
+          "title": "Value",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "value"
+      ],
+      "title": "grouped_items.items.option",
+      "type": "object"
+    },
+    "header_item": {
+      "properties": {
+        "delivery_date": {
+          "title": "Delivery Date",
+          "type": "string"
+        },
+        "return_date": {
+          "title": "Return Date",
+          "type": "string"
+        }
+      },
+      "required": [
+        "delivery_date"
+      ],
+      "title": "header_item",
+      "type": "object"
+    },
+    "request_info": {
+      "properties": {
+        "attendant_name": {
+          "title": "Attendant Name",
+          "type": "string"
+        },
+        "attendant_phone": {
+          "title": "Attendant Phone",
+          "type": "string"
+        },
+        "other_request": {
+          "title": "Other Request",
+          "type": "string"
+        },
+        "pic_name_with_honorific": {
+          "title": "Pic Name With Honorific",
+          "type": "string"
+        },
+        "pic_phone": {
+          "title": "Pic Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "attendant_name",
+        "attendant_phone",
+        "other_request",
+        "pic_name_with_honorific",
+        "pic_phone"
+      ],
+      "title": "request_info",
+      "type": "object"
+    },
+    "site": {
+      "properties": {
+        "branch_client_name": {
+          "title": "Branch Client Name",
+          "type": "string"
+        },
+        "full_address": {
+          "title": "Full Address",
+          "type": "string"
+        },
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/site.sale_office"
+        }
+      },
+      "required": [
+        "branch_client_name",
+        "full_address",
+        "name_with_label"
+      ],
+      "title": "site",
+      "type": "object"
+    },
+    "site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "phone"
+      ],
+      "title": "site.sale_office",
+      "type": "object"
+    },
+    "tenant": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/$defs/tenant.settings"
+        }
+      },
+      "required": [
+        "name",
+        "settings"
+      ],
+      "title": "tenant",
+      "type": "object"
+    },
+    "tenant.settings": {
+      "properties": {
+        "service": {
+          "$ref": "#/$defs/tenant.settings.service"
+        }
+      },
+      "required": [
+        "service"
+      ],
+      "title": "tenant.settings",
+      "type": "object"
+    },
+    "tenant.settings.service": {
+      "properties": {
+        "or_labels_json": {
+          "$ref": "#/$defs/tenant.settings.service.or_labels_json"
+        },
+        "theme_color_json": {
+          "$ref": "#/$defs/tenant.settings.service.theme_color_json"
+        },
+        "theme_logo_url": {
+          "title": "Theme Logo Url",
+          "type": "string"
+        },
+        "theme_rentals_logo_url": {
+          "title": "Theme Rentals Logo Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "theme_color_json",
+        "theme_logo_url",
+        "theme_rentals_logo_url"
+      ],
+      "title": "tenant.settings.service",
+      "type": "object"
+    },
+    "tenant.settings.service.or_labels_json": {
+      "properties": {
+        "or_infoMessage_historiesEstimatesDetail": {
+          "title": "Or Infomessage Historiesestimatesdetail",
+          "type": "string"
+        }
+      },
+      "title": "tenant.settings.service.or_labels_json",
+      "type": "object"
+    },
+    "tenant.settings.service.theme_color_json": {
+      "properties": {
+        "email_header_bg_color": {
+          "title": "Email Header Bg Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email_header_bg_color"
+      ],
+      "title": "tenant.settings.service.theme_color_json",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "available_on_sp_logo": {
+      "title": "Available On Sp Logo",
+      "type": "boolean"
+    },
+    "btn_footer_label": {
+      "title": "Btn Footer Label",
+      "type": "string"
+    },
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "chat_url": {
+      "title": "Chat Url"
+    },
+    "estimate": {
+      "$ref": "#/$defs/estimate"
+    },
+    "estimate_items": {
+      "items": {
+        "$ref": "#/$defs/estimate_items"
+      },
+      "title": "Estimate Items",
+      "type": "array"
+    },
+    "grouped_items": {
+      "items": {
+        "$ref": "#/$defs/grouped_items"
+      },
+      "title": "Grouped Items",
+      "type": "array"
+    },
+    "header_item": {
+      "$ref": "#/$defs/header_item"
+    },
+    "histories_url": {
+      "title": "Histories Url"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "onboarding_url": {
+      "title": "Onboarding Url",
+      "type": "string"
+    },
+    "request_info": {
+      "$ref": "#/$defs/request_info"
+    },
+    "selected_remarks": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Selected Remarks",
+      "type": "array"
+    },
+    "shipping_method_label": {
+      "title": "Shipping Method Label",
+      "type": "string"
+    },
+    "site": {
+      "$ref": "#/$defs/site"
+    },
+    "start_guide_url": {
+      "title": "Start Guide Url",
+      "type": "string"
+    },
+    "tenant": {
+      "$ref": "#/$defs/tenant"
+    },
+    "trans_type": {
+      "title": "Trans Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "available_on_sp_logo",
+    "btn_footer_label",
+    "btn_footer_link",
+    "estimate",
+    "estimate_items",
+    "grouped_items",
+    "header_item",
+    "request_info",
+    "selected_remarks",
+    "shipping_method_label",
+    "site",
+    "tenant"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

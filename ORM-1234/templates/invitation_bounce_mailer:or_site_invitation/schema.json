@@ -1,0 +1,162 @@
+{
+  "$defs": {
+    "invite": {
+      "properties": {
+        "email": {
+          "title": "Email",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email"
+      ],
+      "title": "invite",
+      "type": "object"
+    },
+    "site": {
+      "properties": {
+        "sale_office": {
+          "$ref": "#/$defs/site.sale_office"
+        }
+      },
+      "title": "site",
+      "type": "object"
+    },
+    "site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "phone"
+      ],
+      "title": "site.sale_office",
+      "type": "object"
+    },
+    "tenant": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/$defs/tenant.settings"
+        }
+      },
+      "required": [
+        "name",
+        "settings"
+      ],
+      "title": "tenant",
+      "type": "object"
+    },
+    "tenant.settings": {
+      "properties": {
+        "service": {
+          "$ref": "#/$defs/tenant.settings.service"
+        }
+      },
+      "required": [
+        "service"
+      ],
+      "title": "tenant.settings",
+      "type": "object"
+    },
+    "tenant.settings.service": {
+      "properties": {
+        "theme_color_json": {
+          "$ref": "#/$defs/tenant.settings.service.theme_color_json"
+        },
+        "theme_logo_url": {
+          "title": "Theme Logo Url",
+          "type": "string"
+        },
+        "theme_rentals_logo_url": {
+          "title": "Theme Rentals Logo Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "theme_color_json",
+        "theme_logo_url",
+        "theme_rentals_logo_url"
+      ],
+      "title": "tenant.settings.service",
+      "type": "object"
+    },
+    "tenant.settings.service.theme_color_json": {
+      "properties": {
+        "email_header_bg_color": {
+          "title": "Email Header Bg Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email_header_bg_color"
+      ],
+      "title": "tenant.settings.service.theme_color_json",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "available_on_sp_logo": {
+      "title": "Available On Sp Logo",
+      "type": "boolean"
+    },
+    "btn_footer_label": {
+      "title": "Btn Footer Label",
+      "type": "string"
+    },
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "chat_url": {
+      "title": "Chat Url"
+    },
+    "histories_url": {
+      "title": "Histories Url"
+    },
+    "invite": {
+      "$ref": "#/$defs/invite"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "onboarding_url": {
+      "title": "Onboarding Url",
+      "type": "string"
+    },
+    "site": {
+      "$ref": "#/$defs/site"
+    },
+    "start_guide_url": {
+      "title": "Start Guide Url",
+      "type": "string"
+    },
+    "tenant": {
+      "$ref": "#/$defs/tenant"
+    },
+    "trans_type": {
+      "title": "Trans Type",
+      "type": "string"
+    }
+  },
+  "required": [
+    "available_on_sp_logo",
+    "btn_footer_label",
+    "btn_footer_link",
+    "invite",
+    "tenant"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

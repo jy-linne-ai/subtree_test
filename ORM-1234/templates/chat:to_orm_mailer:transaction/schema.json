@@ -1,0 +1,152 @@
+{
+  "$defs": {
+    "message": {
+      "properties": {
+        "message_text": {
+          "title": "Message Text",
+          "type": "string"
+        },
+        "sender": {
+          "$ref": "#/$defs/message.sender"
+        },
+        "topic_id": {
+          "title": "Topic Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "message_text",
+        "sender",
+        "topic_id"
+      ],
+      "title": "message",
+      "type": "object"
+    },
+    "message.sender": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "message.sender",
+      "type": "object"
+    },
+    "site_topic": {
+      "properties": {
+        "site": {
+          "$ref": "#/$defs/site_topic.site"
+        },
+        "source": {
+          "$ref": "#/$defs/site_topic.source"
+        }
+      },
+      "required": [
+        "site",
+        "source"
+      ],
+      "title": "site_topic",
+      "type": "object"
+    },
+    "site_topic.site": {
+      "properties": {
+        "branch_client_name": {
+          "title": "Branch Client Name",
+          "type": "string"
+        },
+        "branch_name": {
+          "title": "Branch Name",
+          "type": "string"
+        },
+        "client_name_with_name_label": {
+          "title": "Client Name With Name Label",
+          "type": "string"
+        },
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/site_topic.site.sale_office"
+        }
+      },
+      "required": [
+        "branch_client_name",
+        "branch_name",
+        "client_name_with_name_label",
+        "name_with_label",
+        "sale_office"
+      ],
+      "title": "site_topic.site",
+      "type": "object"
+    },
+    "site_topic.site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "site_topic.site.sale_office",
+      "type": "object"
+    },
+    "site_topic.source": {
+      "properties": {
+        "order_number": {
+          "title": "Order Number",
+          "type": "string"
+        }
+      },
+      "required": [
+        "order_number"
+      ],
+      "title": "site_topic.source",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "message": {
+      "$ref": "#/$defs/message"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "order_type": {
+      "title": "Order Type",
+      "type": "string"
+    },
+    "site_topic": {
+      "$ref": "#/$defs/site_topic"
+    },
+    "trans_prefix": {
+      "title": "Trans Prefix",
+      "type": "string"
+    },
+    "type_text": {
+      "title": "Type Text",
+      "type": "string"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "message",
+    "notification_setting",
+    "order_type",
+    "site_topic",
+    "trans_prefix",
+    "type_text"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

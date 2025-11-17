@@ -1,0 +1,675 @@
+{
+  "$defs": {
+    "anyOf.0": {
+      "properties": {
+        "available_on_sp_logo": {
+          "title": "Available On Sp Logo",
+          "type": "boolean"
+        },
+        "email": {
+          "title": "Email",
+          "type": "string"
+        },
+        "is_new_account": {
+          "title": "Is New Account",
+          "type": "boolean"
+        },
+        "is_remind": {
+          "title": "Is Remind",
+          "type": "boolean"
+        },
+        "locals": {
+          "$ref": "#/$defs/anyOf.0.locals"
+        },
+        "login_url": {
+          "title": "Login Url",
+          "type": "string"
+        },
+        "notification_setting": {
+          "title": "Notification Setting",
+          "type": "string"
+        },
+        "onboarding_url": {
+          "title": "Onboarding Url",
+          "type": "string"
+        },
+        "register_url": {
+          "title": "Register Url",
+          "type": "string"
+        },
+        "site": {
+          "$ref": "#/$defs/anyOf.0.site"
+        },
+        "sites": {
+          "items": {
+            "$ref": "#/$defs/anyOf.0.sites"
+          },
+          "title": "Sites",
+          "type": "array"
+        },
+        "start_guide_url": {
+          "title": "Start Guide Url",
+          "type": "string"
+        },
+        "tenant": {
+          "$ref": "#/$defs/anyOf.0.tenant"
+        }
+      },
+      "required": [
+        "available_on_sp_logo",
+        "email",
+        "is_new_account",
+        "is_remind",
+        "locals",
+        "login_url",
+        "register_url",
+        "site",
+        "sites",
+        "tenant"
+      ],
+      "title": "anyOf.0",
+      "type": "object"
+    },
+    "anyOf.0.locals": {
+      "properties": {
+        "tenant_name": {
+          "title": "Tenant Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tenant_name"
+      ],
+      "title": "anyOf.0.locals",
+      "type": "object"
+    },
+    "anyOf.0.site": {
+      "properties": {
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/anyOf.0.site.sale_office"
+        }
+      },
+      "required": [
+        "name_with_label"
+      ],
+      "title": "anyOf.0.site",
+      "type": "object"
+    },
+    "anyOf.0.site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "phone"
+      ],
+      "title": "anyOf.0.site.sale_office",
+      "type": "object"
+    },
+    "anyOf.0.sites": {
+      "properties": {
+        "client_name": {
+          "title": "Client Name",
+          "type": "string"
+        },
+        "site_names": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Site Names",
+          "type": "array"
+        }
+      },
+      "required": [
+        "client_name",
+        "site_names"
+      ],
+      "title": "anyOf.0.sites",
+      "type": "object"
+    },
+    "anyOf.0.tenant": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/$defs/anyOf.0.tenant.settings"
+        }
+      },
+      "required": [
+        "name",
+        "settings"
+      ],
+      "title": "anyOf.0.tenant",
+      "type": "object"
+    },
+    "anyOf.0.tenant.settings": {
+      "properties": {
+        "service": {
+          "$ref": "#/$defs/anyOf.0.tenant.settings.service"
+        }
+      },
+      "required": [
+        "service"
+      ],
+      "title": "anyOf.0.tenant.settings",
+      "type": "object"
+    },
+    "anyOf.0.tenant.settings.service": {
+      "properties": {
+        "theme_color_json": {
+          "$ref": "#/$defs/anyOf.0.tenant.settings.service.theme_color_json"
+        },
+        "theme_logo_url": {
+          "title": "Theme Logo Url",
+          "type": "string"
+        },
+        "theme_rentals_logo_url": {
+          "title": "Theme Rentals Logo Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "theme_color_json",
+        "theme_logo_url",
+        "theme_rentals_logo_url"
+      ],
+      "title": "anyOf.0.tenant.settings.service",
+      "type": "object"
+    },
+    "anyOf.0.tenant.settings.service.theme_color_json": {
+      "properties": {
+        "email_header_bg_color": {
+          "title": "Email Header Bg Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email_header_bg_color"
+      ],
+      "title": "anyOf.0.tenant.settings.service.theme_color_json",
+      "type": "object"
+    },
+    "anyOf.1": {
+      "properties": {
+        "available_on_sp_logo": {
+          "title": "Available On Sp Logo",
+          "type": "boolean"
+        },
+        "email": {
+          "title": "Email",
+          "type": "string"
+        },
+        "is_new_account": {
+          "title": "Is New Account",
+          "type": "boolean"
+        },
+        "is_remind": {
+          "title": "Is Remind",
+          "type": "boolean"
+        },
+        "locals": {
+          "$ref": "#/$defs/anyOf.1.locals"
+        },
+        "login_url": {
+          "title": "Login Url",
+          "type": "string"
+        },
+        "notification_setting": {
+          "title": "Notification Setting",
+          "type": "string"
+        },
+        "onboarding_url": {
+          "title": "Onboarding Url",
+          "type": "string"
+        },
+        "site": {
+          "$ref": "#/$defs/anyOf.1.site"
+        },
+        "sites": {
+          "items": {
+            "$ref": "#/$defs/anyOf.1.sites"
+          },
+          "title": "Sites",
+          "type": "array"
+        },
+        "start_guide_url": {
+          "title": "Start Guide Url",
+          "type": "string"
+        },
+        "tenant": {
+          "$ref": "#/$defs/anyOf.1.tenant"
+        }
+      },
+      "required": [
+        "available_on_sp_logo",
+        "email",
+        "is_new_account",
+        "is_remind",
+        "locals",
+        "login_url",
+        "site",
+        "sites",
+        "tenant"
+      ],
+      "title": "anyOf.1",
+      "type": "object"
+    },
+    "anyOf.1.locals": {
+      "properties": {
+        "tenant_name": {
+          "title": "Tenant Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tenant_name"
+      ],
+      "title": "anyOf.1.locals",
+      "type": "object"
+    },
+    "anyOf.1.site": {
+      "properties": {
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/anyOf.1.site.sale_office"
+        }
+      },
+      "required": [
+        "name_with_label"
+      ],
+      "title": "anyOf.1.site",
+      "type": "object"
+    },
+    "anyOf.1.site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "phone"
+      ],
+      "title": "anyOf.1.site.sale_office",
+      "type": "object"
+    },
+    "anyOf.1.sites": {
+      "properties": {
+        "client_name": {
+          "title": "Client Name",
+          "type": "string"
+        },
+        "site_names": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Site Names",
+          "type": "array"
+        }
+      },
+      "required": [
+        "client_name",
+        "site_names"
+      ],
+      "title": "anyOf.1.sites",
+      "type": "object"
+    },
+    "anyOf.1.tenant": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "settings": {
+          "$ref": "#/$defs/anyOf.1.tenant.settings"
+        }
+      },
+      "required": [
+        "name",
+        "settings"
+      ],
+      "title": "anyOf.1.tenant",
+      "type": "object"
+    },
+    "anyOf.1.tenant.settings": {
+      "properties": {
+        "service": {
+          "$ref": "#/$defs/anyOf.1.tenant.settings.service"
+        }
+      },
+      "required": [
+        "service"
+      ],
+      "title": "anyOf.1.tenant.settings",
+      "type": "object"
+    },
+    "anyOf.1.tenant.settings.service": {
+      "properties": {
+        "theme_color_json": {
+          "$ref": "#/$defs/anyOf.1.tenant.settings.service.theme_color_json"
+        },
+        "theme_logo_url": {
+          "title": "Theme Logo Url",
+          "type": "string"
+        },
+        "theme_rentals_logo_url": {
+          "title": "Theme Rentals Logo Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "theme_color_json",
+        "theme_logo_url",
+        "theme_rentals_logo_url"
+      ],
+      "title": "anyOf.1.tenant.settings.service",
+      "type": "object"
+    },
+    "anyOf.1.tenant.settings.service.theme_color_json": {
+      "properties": {
+        "email_header_bg_color": {
+          "title": "Email Header Bg Color",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email_header_bg_color"
+      ],
+      "title": "anyOf.1.tenant.settings.service.theme_color_json",
+      "type": "object"
+    },
+    "anyOf.2": {
+      "properties": {
+        "chat_url": {
+          "title": "Chat Url"
+        },
+        "email": {
+          "title": "Email",
+          "type": "string"
+        },
+        "histories_url": {
+          "title": "Histories Url"
+        },
+        "is_new_account": {
+          "title": "Is New Account",
+          "type": "boolean"
+        },
+        "is_remind": {
+          "title": "Is Remind",
+          "type": "boolean"
+        },
+        "login_url": {
+          "title": "Login Url",
+          "type": "string"
+        },
+        "notification_setting": {
+          "title": "Notification Setting",
+          "type": "string"
+        },
+        "register_url": {
+          "title": "Register Url",
+          "type": "string"
+        },
+        "site": {
+          "$ref": "#/$defs/anyOf.2.site"
+        },
+        "sites": {
+          "items": {
+            "$ref": "#/$defs/anyOf.2.sites"
+          },
+          "title": "Sites",
+          "type": "array"
+        },
+        "tenant": {
+          "$ref": "#/$defs/anyOf.2.tenant"
+        },
+        "trans_type": {
+          "title": "Trans Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "is_new_account",
+        "is_remind",
+        "login_url",
+        "register_url",
+        "site",
+        "sites",
+        "tenant"
+      ],
+      "title": "anyOf.2",
+      "type": "object"
+    },
+    "anyOf.2.site": {
+      "properties": {
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/anyOf.2.site.sale_office"
+        }
+      },
+      "required": [
+        "name_with_label"
+      ],
+      "title": "anyOf.2.site",
+      "type": "object"
+    },
+    "anyOf.2.site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "phone"
+      ],
+      "title": "anyOf.2.site.sale_office",
+      "type": "object"
+    },
+    "anyOf.2.sites": {
+      "properties": {
+        "client_name": {
+          "title": "Client Name",
+          "type": "string"
+        },
+        "site_names": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Site Names",
+          "type": "array"
+        }
+      },
+      "required": [
+        "client_name",
+        "site_names"
+      ],
+      "title": "anyOf.2.sites",
+      "type": "object"
+    },
+    "anyOf.2.tenant": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "anyOf.2.tenant",
+      "type": "object"
+    },
+    "anyOf.3": {
+      "properties": {
+        "chat_url": {
+          "title": "Chat Url"
+        },
+        "email": {
+          "title": "Email",
+          "type": "string"
+        },
+        "histories_url": {
+          "title": "Histories Url"
+        },
+        "is_new_account": {
+          "title": "Is New Account",
+          "type": "boolean"
+        },
+        "is_remind": {
+          "title": "Is Remind",
+          "type": "boolean"
+        },
+        "login_url": {
+          "title": "Login Url",
+          "type": "string"
+        },
+        "notification_setting": {
+          "title": "Notification Setting",
+          "type": "string"
+        },
+        "site": {
+          "$ref": "#/$defs/anyOf.3.site"
+        },
+        "sites": {
+          "items": {
+            "$ref": "#/$defs/anyOf.3.sites"
+          },
+          "title": "Sites",
+          "type": "array"
+        },
+        "tenant": {
+          "$ref": "#/$defs/anyOf.3.tenant"
+        },
+        "trans_type": {
+          "title": "Trans Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "email",
+        "is_new_account",
+        "is_remind",
+        "login_url",
+        "site",
+        "sites",
+        "tenant"
+      ],
+      "title": "anyOf.3",
+      "type": "object"
+    },
+    "anyOf.3.site": {
+      "properties": {
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/anyOf.3.site.sale_office"
+        }
+      },
+      "required": [
+        "name_with_label"
+      ],
+      "title": "anyOf.3.site",
+      "type": "object"
+    },
+    "anyOf.3.site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "phone": {
+          "title": "Phone",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "phone"
+      ],
+      "title": "anyOf.3.site.sale_office",
+      "type": "object"
+    },
+    "anyOf.3.sites": {
+      "properties": {
+        "client_name": {
+          "title": "Client Name",
+          "type": "string"
+        },
+        "site_names": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Site Names",
+          "type": "array"
+        }
+      },
+      "required": [
+        "client_name",
+        "site_names"
+      ],
+      "title": "anyOf.3.sites",
+      "type": "object"
+    },
+    "anyOf.3.tenant": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "anyOf.3.tenant",
+      "type": "object"
+    }
+  },
+  "anyOf": [
+    {
+      "$ref": "#/$defs/anyOf.0"
+    },
+    {
+      "$ref": "#/$defs/anyOf.1"
+    },
+    {
+      "$ref": "#/$defs/anyOf.2"
+    },
+    {
+      "$ref": "#/$defs/anyOf.3"
+    }
+  ],
+  "title": "Schema"
+}

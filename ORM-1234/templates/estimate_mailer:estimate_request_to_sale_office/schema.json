@@ -1,0 +1,284 @@
+{
+  "$defs": {
+    "estimate": {
+      "properties": {
+        "delivery_date_text": {
+          "title": "Delivery Date Text",
+          "type": "string"
+        },
+        "trans": {
+          "$ref": "#/$defs/estimate.trans"
+        }
+      },
+      "required": [
+        "delivery_date_text",
+        "trans"
+      ],
+      "title": "estimate",
+      "type": "object"
+    },
+    "estimate.trans": {
+      "properties": {
+        "or_code": {
+          "title": "Or Code",
+          "type": "string"
+        },
+        "shipping_method_label": {
+          "title": "Shipping Method Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "or_code",
+        "shipping_method_label"
+      ],
+      "title": "estimate.trans",
+      "type": "object"
+    },
+    "estimate_items": {
+      "properties": {
+        "item_product_code": {
+          "title": "Item Product Code",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "item_product_code",
+        "quantity"
+      ],
+      "title": "estimate_items",
+      "type": "object"
+    },
+    "header_item": {
+      "properties": {
+        "delivery_date_text": {
+          "title": "Delivery Date Text",
+          "type": "string"
+        },
+        "return_date_text": {
+          "title": "Return Date Text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "delivery_date_text",
+        "return_date_text"
+      ],
+      "title": "header_item",
+      "type": "object"
+    },
+    "rent_items": {
+      "properties": {
+        "option_text": {
+          "title": "Option Text",
+          "type": "string"
+        },
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "source_product_code": {
+          "title": "Source Product Code",
+          "type": "string"
+        },
+        "user_holder_name": {
+          "title": "User Holder Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_name",
+        "quantity",
+        "source_product_code",
+        "user_holder_name"
+      ],
+      "title": "rent_items",
+      "type": "object"
+    },
+    "request_info": {
+      "properties": {
+        "attendant_name": {
+          "title": "Attendant Name",
+          "type": "string"
+        },
+        "attendant_phone": {
+          "title": "Attendant Phone",
+          "type": "string"
+        },
+        "other_request": {
+          "title": "Other Request",
+          "type": "string"
+        },
+        "pic_name_with_honorific": {
+          "title": "Pic Name With Honorific",
+          "type": "string"
+        },
+        "pic_phone": {
+          "title": "Pic Phone",
+          "type": "string"
+        },
+        "shipping_method_label": {
+          "title": "Shipping Method Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "other_request",
+        "pic_name_with_honorific",
+        "pic_phone",
+        "shipping_method_label"
+      ],
+      "title": "request_info",
+      "type": "object"
+    },
+    "sale_items": {
+      "properties": {
+        "option_text": {
+          "title": "Option Text",
+          "type": "string"
+        },
+        "product_name": {
+          "title": "Product Name",
+          "type": "string"
+        },
+        "quantity": {
+          "title": "Quantity",
+          "type": "integer"
+        },
+        "source_product_code": {
+          "title": "Source Product Code",
+          "type": "string"
+        },
+        "user_holder_name": {
+          "title": "User Holder Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "product_name",
+        "quantity",
+        "source_product_code",
+        "user_holder_name"
+      ],
+      "title": "sale_items",
+      "type": "object"
+    },
+    "site": {
+      "properties": {
+        "branch_client_name": {
+          "title": "Branch Client Name",
+          "type": "string"
+        },
+        "client_name_with_name_label": {
+          "title": "Client Name With Name Label",
+          "type": "string"
+        },
+        "full_address": {
+          "title": "Full Address",
+          "type": "string"
+        },
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        },
+        "sale_office": {
+          "$ref": "#/$defs/site.sale_office"
+        }
+      },
+      "required": [
+        "branch_client_name",
+        "client_name_with_name_label",
+        "full_address",
+        "name_with_label",
+        "sale_office"
+      ],
+      "title": "site",
+      "type": "object"
+    },
+    "site.sale_office": {
+      "properties": {
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "site.sale_office",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "estimate": {
+      "$ref": "#/$defs/estimate"
+    },
+    "estimate_items": {
+      "items": {
+        "$ref": "#/$defs/estimate_items"
+      },
+      "title": "Estimate Items",
+      "type": "array"
+    },
+    "header_item": {
+      "$ref": "#/$defs/header_item"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    },
+    "rent_items": {
+      "items": {
+        "$ref": "#/$defs/rent_items"
+      },
+      "title": "Rent Items",
+      "type": "array"
+    },
+    "request_info": {
+      "$ref": "#/$defs/request_info"
+    },
+    "sale_items": {
+      "items": {
+        "$ref": "#/$defs/sale_items"
+      },
+      "title": "Sale Items",
+      "type": "array"
+    },
+    "selected_remarks": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Selected Remarks",
+      "type": "array"
+    },
+    "site": {
+      "$ref": "#/$defs/site"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "estimate",
+    "estimate_items",
+    "header_item",
+    "notification_setting",
+    "rent_items",
+    "request_info",
+    "sale_items",
+    "selected_remarks",
+    "site"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

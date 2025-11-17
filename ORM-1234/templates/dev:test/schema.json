@@ -1,0 +1,62 @@
+{
+  "$defs": {
+    "hoge": {
+      "properties": {
+        "fuga": {
+          "title": "Fuga",
+          "type": "string"
+        }
+      },
+      "required": [
+        "fuga"
+      ],
+      "title": "hoge",
+      "type": "object"
+    },
+    "piyo": {
+      "properties": {
+        "piyo": {
+          "title": "Piyo",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "piyo"
+      ],
+      "title": "piyo",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "foo": {
+      "title": "Foo",
+      "type": "string"
+    },
+    "hoge": {
+      "$ref": "#/$defs/hoge"
+    },
+    "kal": {
+      "title": "Kal",
+      "type": "string"
+    },
+    "message": {
+      "title": "Message",
+      "type": "string"
+    },
+    "piyo": {
+      "$ref": "#/$defs/piyo"
+    },
+    "test": {
+      "title": "Test",
+      "type": "string"
+    }
+  },
+  "required": [
+    "foo",
+    "message",
+    "piyo",
+    "test"
+  ],
+  "title": "Schema",
+  "type": "object"
+}

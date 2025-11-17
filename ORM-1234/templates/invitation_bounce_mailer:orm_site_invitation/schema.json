@@ -1,0 +1,59 @@
+{
+  "$defs": {
+    "invite": {
+      "properties": {
+        "email": {
+          "title": "Email",
+          "type": "string"
+        },
+        "site": {
+          "$ref": "#/$defs/invite.site"
+        }
+      },
+      "required": [
+        "email",
+        "site"
+      ],
+      "title": "invite",
+      "type": "object"
+    },
+    "invite.site": {
+      "properties": {
+        "branch_client_name": {
+          "title": "Branch Client Name",
+          "type": "string"
+        },
+        "name_with_label": {
+          "title": "Name With Label",
+          "type": "string"
+        }
+      },
+      "required": [
+        "branch_client_name",
+        "name_with_label"
+      ],
+      "title": "invite.site",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "btn_footer_link": {
+      "title": "Btn Footer Link",
+      "type": "string"
+    },
+    "invite": {
+      "$ref": "#/$defs/invite"
+    },
+    "notification_setting": {
+      "title": "Notification Setting",
+      "type": "string"
+    }
+  },
+  "required": [
+    "btn_footer_link",
+    "invite",
+    "notification_setting"
+  ],
+  "title": "Schema",
+  "type": "object"
+}
